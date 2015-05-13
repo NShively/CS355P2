@@ -1,0 +1,25 @@
+<% // create a list of javascript files to have the header load %>
+<% var js_include = ['create_user.js']; %>
+<% include header %>
+
+<!-- Note that this is a post -->
+<form id="create_users_form" action="<%= action %>">
+    <table id="login">
+        <tr><td>Username:</td>
+            <td><input type="text" id="Username" name="Username" /></td>
+        </tr>
+        <tr><td>First Name:</td>
+            <td><input type="text" id="FirstName" name="FirstName" /></td>
+        </tr>
+        <tr><td>Last Name:</td>
+            <td><textarea id="LastName" name="LastName"></textarea></td>
+        </tr>
+
+    </table>
+    <!-- not that we use a button here and not submit -->
+    <input type="button" id="createUserBtn" value="Create" />
+</form>
+
+<div id="output" style="margin:10px;display:none"></div>
+
+<% include footer %>

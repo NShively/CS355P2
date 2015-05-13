@@ -1,0 +1,22 @@
+<% include header %>
+
+<div>
+    <% if(rs.length > 0) { %>
+    <table border="1">
+        <tr><th>Title</th><th>Rated by</th><th>Rating</th></tr>
+        <% for (var i=0; rs.length > i; i++) { %>
+        <tr>
+            <td><a href="/TMovies/?movieid=<%= rs[i].MovieID %>"> <%= rs[i].Title %></a></td><td><%=rs[i].Username%></td><td><%=rs[i].Rating%></td>
+        </tr>
+        <% } %>
+    </table>
+    <% } else { %>
+    No songs are entered into the Music database table.
+    <% } %>
+</div>
+
+<div style="margin-top:10px;">
+    <a href="/TMovie/dropdown">Create New Movie Rating</a>
+</div>
+
+<% include footer %>

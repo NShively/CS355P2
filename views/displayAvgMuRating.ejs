@@ -1,0 +1,20 @@
+<% include header %>
+
+<div>
+    <% if(rs.length > 0) { %>
+    <table border="1">
+        <tr><th>Title</th><th>AvgRating</th></tr>
+        <% for (var i=0; rs.length > i; i++) { %>
+        <tr>
+            <td><a href="/TMusic/?musicid=<%= rs[i].MusicID %>"> <%= rs[i].Title%></a></td><td><%=rs[i].AvgRating%></td>
+        </tr>
+        <% } %>
+    </table>
+    <% } else { %>
+    No songs are entered into the Music database table.
+    <% } %>
+</div>
+
+
+
+<% include footer %>

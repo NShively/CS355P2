@@ -1,0 +1,20 @@
+<% include header %>
+
+<div>
+    <% if(rs.length > 0) { %>
+    <table border="1">
+        <tr><th>Title</th><th>AvgRating</th></tr>
+        <% for (var i=0; rs.length > i; i++) { %>
+        <tr>
+            <td><a href="/TMovie/?movieid=<%= rs[i].MovieID %>"> <%= rs[i].Title%></a></td><td><%=rs[i].AvgRating%></td>
+        </tr>
+        <% } %>
+    </table>
+    <% } else { %>
+    No movies are entered into the Movies database table.
+    <% } %>
+</div>
+
+
+
+<% include footer %>

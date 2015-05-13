@@ -1,0 +1,12 @@
+<% include header %>
+
+<% if(rs.length > 0) { %>
+Title: <%= rs[0].Title %> <br />
+Genre: <%= rs[0].Genre %> <br />
+Composer: <%= rs[0].Composer %> <br />
+
+<% } else { %>
+No music matched this music id <%= musicid %>.
+<% } %>
+
+<% include footer %>

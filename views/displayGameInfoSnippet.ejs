@@ -1,0 +1,10 @@
+<h2>Movie Inserted</h2>
+<% if(rs.length > 0) { %>
+
+Title: <%= rs[0].Title %> <br />
+Genre: <%= rs[0].Genre %> <br />
+Producer: <%= rs[0].Producer %> <br />
+
+<% } else { %>
+No game matched this game id <%= gameid %>.
+<% } %>

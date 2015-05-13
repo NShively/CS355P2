@@ -1,0 +1,22 @@
+<% include header %>
+
+<div>
+    <% if(rs.length > 0) { %>
+    <table border="1">
+        <tr><th>Title</th><th>Director</th><th>Genre</th></tr>
+        <% for (var i=0; rs.length > i; i++) { %>
+        <tr>
+            <td><a href="/TMovies/?movieid=<%= rs[i].MovieID %>"> <%= rs[i].Title %></a></td><td><%= rs[i].Director %></td><td><%= rs[i].Genre %></td>
+        </tr>
+        <% } %>
+    </table>
+    <% } else { %>
+    No movies are entered into the Movies database table.
+    <% } %>
+</div>
+
+<div style="margin-top:10px;">
+    <a href="/TMovies/create">Create New Movie</a>
+</div>
+
+<% include footer %>

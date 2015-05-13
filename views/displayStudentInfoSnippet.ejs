@@ -1,0 +1,10 @@
+<h2>Movie Inserted</h2>
+<% if(rs.length > 0) { %>
+Title: <%= rs[0].Title %> <br />
+Genre: <%= rs[0].Genre %> <br />
+City: <%= rs[0].City %> <br />
+State: <%= rs[0].State %> <br />
+Country: <%= rs[0].Country %> <br />
+<% } else { %>
+    No movie matched this movie id <%= studentid %>.
+<% } %>

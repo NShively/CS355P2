@@ -1,0 +1,12 @@
+<% include header %>
+
+<% if(rs.length > 0) { %>
+Title: <%= rs[0].Title %> <br />
+Genre: <%= rs[0].Genre %> <br />
+Director: <%= rs[0].Director %> <br />
+
+<% } else { %>
+No movie matched this movie id <%= movieid %>.
+<% } %>
+
+<% include footer %>

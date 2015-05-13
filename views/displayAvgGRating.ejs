@@ -1,0 +1,20 @@
+<% include header %>
+
+<div>
+    <% if(rs.length > 0) { %>
+    <table border="1">
+        <tr><th>Title</th><th>AvgRating</th></tr>
+        <% for (var i=0; rs.length > i; i++) { %>
+        <tr>
+            <td><a href="/TGames/?gameid=<%= rs[i].GameID %>"> <%= rs[i].Title%></a></td><td><%=rs[i].AvgRating%></td>
+        </tr>
+        <% } %>
+    </table>
+    <% } else { %>
+    No games are entered into the games database table.
+    <% } %>
+</div>
+
+
+
+<% include footer %>

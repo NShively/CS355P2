@@ -1,0 +1,9 @@
+<h2>Rating Inserted</h2>
+<% if(rs.length > 0) { %>
+Username: <%= rs[0].Username %> <br />
+Music Title: <%= rs[0].Title %> <br />
+Rating: <%= rs[0].Rating %> <br />
+
+<% } else { %>
+No rating matched this rating id <%= movieid%>.
+<% } %>

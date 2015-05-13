@@ -1,0 +1,22 @@
+<% include header %>
+
+<div>
+    <% if(rs.length > 0) { %>
+    <table border="1">
+        <tr><th>Title</th></tr>
+        <% for (var i=0; rs.length > i; i++) { %>
+        <tr>
+            <td><a href="/TMusic/?musicid=<%= rs[i].MusicID %>"> <%= rs[i].Title %></a></td>
+        </tr>
+        <% } %>
+    </table>
+    <% } else { %>
+    No songs are entered into the Music database table.
+    <% } %>
+</div>
+
+<div style="margin-top:10px;">
+    <a href="/TMusic/create">Create New Song</a>
+</div>
+
+<% include footer %>
